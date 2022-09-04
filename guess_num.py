@@ -6,9 +6,11 @@
 import random
 
 r = random.randint(1, 100)
+guess_times = 0
 while True:
     num = input('請猜數字: ')
     num = int(num)
+    guess_times += 1 # guess_times = guess_times + 1 意思一樣
     if num != r:
         if num > r:
             print('比答案大')
@@ -16,5 +18,7 @@ while True:
             print('比答案小')
     else:
         print('終於猜對了!')
+        print('共猜了', guess_times, '次! ')
         break
+    print('這是你猜第', guess_times, '次')
 
