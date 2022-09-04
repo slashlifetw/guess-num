@@ -5,7 +5,12 @@
 
 import random
 
-r = random.randint(1, 100)
+start_num = input('請決定隨機數字範圍開始值')
+end_num = input('請決定隨機數字範圍結束值')
+start_num = int(start_num)
+end_num = int(end_num)
+
+r = random.randint(start_num, end_num)
 guess_times = 0
 while True:
     num = input('請猜數字: ')
